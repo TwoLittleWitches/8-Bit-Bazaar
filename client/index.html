@@ -27,15 +27,12 @@
   <body>
     <div id="root">Welcome to Frontend</div>
     <script type="module">
-      import RefreshRuntime from "https://eight-bit-app.onrender.com/@react-refresh";
+      import RefreshRuntime from "./node_modules/react-refresh";
       RefreshRuntime.injectIntoGlobalHook(window);
       window.$RefreshReg$ = () => {};
       window.$RefreshSig$ = () => (type) => type;
       window.__vite_plugin_react_preamble_installed__ = true;
     </script>
-    <script
-      type="module"
-      src="https://eight-bit-app.onrender.com/src/main.jsx"
-    ></script>
+    <script type="module" src="./client/src/main.jsx"></script>
   </body>
 </html>
