@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 })*/
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 dotenv.config();
 
 import { defineConfig } from "vite";
@@ -14,22 +14,28 @@ import react from "@vitejs/plugin-react";
 const { PORT = 3000 } = process.env;
 
 export default defineConfig({
-  plugins: [react({
-      jsxRuntime: 'classic' // Add this line
-    }
-  )],
+  plugins: [
+    react({
+      jsxRuntime: "classic", // Add this line
+    }),
+  ],
   server: {
     proxy: {
-      '/api': {
+      "/api": {
         target: `http://localhost:${PORT}`,
         changeOrigin: true,
       },
     },
   },
-  build: {
+  // Replace for production
+  /* build: {
     manifest: true,
     rollupOptions: {
       input: "./src/main.jsx",
     },
+  }, */
+
+  build: {
+    outDir: "../dist/app",
   },
 });
