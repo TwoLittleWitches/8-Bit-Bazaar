@@ -36,5 +36,5 @@ app.use((err, req, res, next) => {
   }
 });
 // Add for production
-//app.use(express.static(path.join(CURRENT_WORKING_DIR, "dist/app")));
+app.use(express.static(path.join(CURRENT_WORKING_DIR, "dist/app")));
 export default app;
