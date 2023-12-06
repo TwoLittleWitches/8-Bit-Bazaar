@@ -28,14 +28,14 @@ export default defineConfig({
     },
   },
   // Replace for production
-  /* build: {
+  build: {
     manifest: true,
     rollupOptions: {
       input: "./src/main.jsx",
     },
-  }, */
-
-  build: {
-    outDir: "../dist/app",
   },
+
+  /* build: {
+    outDir: "../dist/app",
+  }, */
 });
