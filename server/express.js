@@ -28,7 +28,10 @@ app.use(compress());
 app.use(helmet());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://eight-bit-app.onrender.com"],
+    origin: [
+      "http://localhost:3000",
+      "https://eight-bit-api-f18o.onrender.com",
+    ],
   })
 );
 app.use((err, req, res, next) => {
