@@ -19,14 +19,14 @@ export default defineConfig({
       jsxRuntime: "classic", // Add this line
     }),
   ],
-  server: {
+  /* server: {
     proxy: {
       "/api": {
         target: `http://localhost:${PORT}`,
         changeOrigin: true,
       },
     },
-  },
+  }, */
   // Replace for production
   /* build: {
     manifest: true,
