@@ -27,7 +27,7 @@ export default defineConfig({
       },
     },
   }, */
-  // Replace for production
+  // For development
   /* build: {
     manifest: true,
     rollupOptions: {
@@ -35,6 +35,7 @@ export default defineConfig({
     },
   }, */
 
+  // For production
   build: {
     outDir: "../dist/app",
   },
