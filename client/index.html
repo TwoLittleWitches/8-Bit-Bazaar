@@ -16,26 +16,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/client/assets/images/favicon.svg"
-    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>8-Bit Bazaar Marketplace</title>
   </head>
   <body>
     <div id="root">Welcome to Frontend</div>
     <script type="module">
-      import RefreshRuntime from "https://eight-bit-app.onrender.com/node_modules/react-refresh";
+      import RefreshRuntime from "http://localhost:5173/@react-refresh";
       RefreshRuntime.injectIntoGlobalHook(window);
       window.$RefreshReg$ = () => {};
       window.$RefreshSig$ = () => (type) => type;
       window.__vite_plugin_react_preamble_installed__ = true;
     </script>
-    <script
-      type="module"
-      src="https://eight-bit-app.onrender.com/client/src/main.jsx"
-    ></script>
+    <script type="module" src="http://localhost:5173/src/main.jsx"></script>
   </body>
 </html>
