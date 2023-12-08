@@ -18,7 +18,6 @@ import EditProduct from "./product/EditProduct";
 import Product from "./product/Product";
 import Cart from "./cart/Cart";
 import Checkout from "./cart/Checkout";
-import PlaceOrder from "./cart/PlaceOrder";
 import StripeConnect from "./user/StripeConnect";
 import ShopOrders from "./order/ShopOrders";
 import Order from "./order/Order";
@@ -36,8 +35,7 @@ const MainRouter = () => {
         <Route path="/user/:userId" component={Profile} />
 
         <Route path="/cart" component={Cart} />
-        <Route path="/checkout" component={Checkout} />
-        <Route path="/placeorder" component={PlaceOrder} />
+        <PrivateRoute path="/checkout" component={Checkout} />
         <Route path="/product/:productId" component={Product} />
         <Route path="/shops/all" component={Shops} />
         <Route path="/shops/:shopId" component={Shop} />
