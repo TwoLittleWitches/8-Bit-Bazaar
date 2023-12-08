@@ -10,6 +10,11 @@ import PlaceOrder from "./PlaceOrder";
 import { Elements } from "react-stripe-elements";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    margin: 30,
+    marginTop: 30,
+  },
   card: {
     margin: "auto",
     padding: "16px 40px 90px 40px",

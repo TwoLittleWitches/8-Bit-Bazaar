@@ -9,7 +9,7 @@ import Checkout from "./Checkout";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    margin: "auto",
+    margin: 30,
   },
 }));
 
