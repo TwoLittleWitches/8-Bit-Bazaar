@@ -5,8 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 })*/
-import dotenv from "dotenv";
-dotenv.config();
+
+//import dotenv from "dotenv";
+//dotenv.config();
 
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
@@ -19,14 +20,18 @@ export default defineConfig({
       jsxRuntime: "classic", // Add this line
     }),
   ],
-  /* server: {
+  server: {
     proxy: {
       "/api": {
         target: `http://localhost:${PORT}`,
         changeOrigin: true,
       },
+      "/auth": {
+        target: `http://localhost:${PORT}`,
+        changeOrigin: true,
+      },
     },
-  }, */
+  },
   // For development
   /* build: {
     manifest: true,
