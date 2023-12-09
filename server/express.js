@@ -45,6 +45,5 @@ app.use((err, req, res, next) => {
   }
 });
 
-// EXPORTS TO 
-APP
+// EXPORTS TO APP
 export default app;
