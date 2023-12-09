@@ -1,3 +1,5 @@
+// IMPORTS MODULES TO BE USED
+
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -10,6 +12,8 @@ import LatestProducts from "./../core/LatestProducts";
 import { list } from "./../shop/api-shop.js";
 import FeaturedShops from "./../core/FeaturedShops";
 import FusionFactoryLogo from "./../assets/images/FusionFactoryLogo_100px_white.png";
+
+// STYLES USED FOR THIS COMPONENT
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -41,13 +45,15 @@ export default function Home() {
     const abortController = new AbortController();
     const signal = abortController.signal;
 
-    // Fetch latest products
+    // FETCHES DATA FOR COMPONENTS
+
+    // LATEST PRODUCTS
     listLatestHome(signal)
       .then((productData) => {
         if (productData.error) {
           setError(productData.error);
         } else {
-          // Fetch random shops
+          // FEATURED SHOPS
           list(signal)
             .then((shopData) => {
               if (shopData.error) {
@@ -66,8 +72,11 @@ export default function Home() {
     };
   }, []);
 
+  // RETURNS THE HOME COMPONENT
+
   return (
     <div>
+      {/* // DISPLAYS THE SPLASH IMAGE */}
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
@@ -76,8 +85,14 @@ export default function Home() {
           alt="Welcome to 8-Bit Bazaar - Your Retro Game Source!"
         />
       </Card>
+
+      {/* DISPLAYS LATEST PRODUCTS COMPONENT */}
       <LatestProducts products={data.products} />
+
+      {/* DISPLAYS FEATURED SHOPS COMPONENT */}
       <FeaturedShops shops={data.shops} />
+
+      {/* DISPLAYS FOOTER - FUSION FACTORY LOGO AND COPYRIGHT INFO */}
       <Card
         className={classes.card}
         style={{
